@@ -12,9 +12,13 @@ import java.time.LocalDate;
 public class User {
 
     private Integer userId;
-    private String email;
+    private String username;
     private String password;
-    private String loginStatus;
-    private LocalDate registerDate;
-
+    private String name;
+    private String lastName;
+    private String email;
+    private String department;
+    //private String loginStatus;
+    //private LocalDate registerDate;
+    private Integer marketId;
 }

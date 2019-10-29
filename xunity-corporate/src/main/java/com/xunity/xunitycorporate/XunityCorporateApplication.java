@@ -28,7 +28,7 @@ public class XunityCorporateApplication implements CommandLineRunner {
         logger.info("iniciando ....");
 
         jdbcProductRepository
-                .create(new Product(null,"AAA", "AAA", 10.2, 20,9,1,"URLTEST"));
+                .create(new Product(null,"AAA", "AAA", 10.2, 20,9,1,"https://fuxionstorage.blob.core.windows.net/vhdfuxionoffix/newOffix/imageProducts/EC/EC_143147_GRA_16072018_232331_MAIN.jpg"));
         List<Product> products = jdbcProductRepository
                 .findAll();
         logger.info("products: {}", products);

@@ -22,8 +22,8 @@ public class JdbcProductRepository implements ProductRepository{
 
     @Override
     public void update(Product product) {
-        final String sql = "update product set name = ?, price = ? where id = ?";
-        jdbcTemplate.update(sql, product.getProductName(), product.getPrice(), product.getProductId());
+        final String sql = "update product set name = ?, description=?,price = ?,stock=?,cvPoints=?,status=?,imageUrl=? where id = ?";
+        jdbcTemplate.update(sql, product.getProductName(), product.getProductDescription(),product.getPrice(), product.getStock(),product.getCvPoints(),product.getStatus(),product.getImageUrl(),product.getProductId());
     }
 
     @Override

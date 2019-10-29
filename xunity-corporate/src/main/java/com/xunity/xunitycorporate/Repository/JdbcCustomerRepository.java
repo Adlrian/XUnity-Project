@@ -23,8 +23,9 @@ public class JdbcCustomerRepository implements CustomerRepository {
 
     @Override
     public void update(Customer customer) {
-        final String sql = "update customer set name = ?, lastname = ? where id = ?";
-        jdbcTemplate.update(sql, customer.getCustomerName(), customer.getCustomerLastName(), customer.getCustomerId());
+        final String sql = "update customer set name = ?, lastname = ?,username=?, password=?,phone=?,dni=?,address=?,enrollerId=?,status=?,customerType=?,marketId=? where id = ?";
+        jdbcTemplate.update(sql, customer.getCustomerName(), customer.getCustomerLastName(),customer.getUsername(),customer.getPassword(),customer.getPhone(),
+                customer.getDni(),customer.getAddress(),customer.getEnrollerId(),customer.getStatus(),customer.getCustomerType(),customer.getMarketId(),customer.getCustomerId());
     }
 
     @Override

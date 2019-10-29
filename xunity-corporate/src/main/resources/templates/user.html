@@ -15,9 +15,9 @@
 <body>
 
 <div class="container">
-    <h3>Listado de Customers</h3>
+    <h3>Listado de Usuarios</h3>
     <div class="col-md-12">
-        <a th:href="@{/customers/add}" class="btn btn-primary">Agregar a carrito</a>
+        <a th:href="@{/users/add}" class="btn btn-primary">Agregar a carrito</a>
     </div>
 
     <div th:switch="customers">
@@ -25,31 +25,30 @@
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
-                    <th scope="col">customerId</th>
-                    <th scope="col">customerName</th>
-                    <th scope="col">customerLastName</th>
+                    <th scope="col">userId</th>
                     <th scope="col">username</th>
-                    <th scope="col">dni</th>
+                    <th scope="col">name</th>
+                    <th scope="col">lastName</th>
+                    <th scope="col">email</th>
                     <th scope="col">actions</th>
-
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="customer : ${customers}">
-                    <th scope="row" th:text="${customer.customerId}"></th>
-                    <td th:text="${customer.customerName}"></td>
-                    <td th:text="${customer.customerLastName}"></td>
-                    <td th:text="${customer.username}"></td>
-                    <td th:text="${customer.dni}"></td>
+                <tr th:each="user : ${users}">
+                    <th scope="row" th:text="${user.userId}"></th>
+                    <td th:text="${user.username}"></td>
+                    <td th:text="${user.name}"></td>
+                    <td th:text="${user.lastName}"></td>
+                    <td th:text="${user.email}"></td>
                     <td class="text-center">
                         <div class="btn-group">
 
-                            <a th:href="@{/customers/edit/{customerId}
-                                    (customerId=${customer.customerId})}"
+                            <a th:href="@{/users/edit/{userId}
+                                    (userId=${user.userId})}"
                                class="btn btn-primary btn-sm">Editar</a>
 
-                            <a th:href="@{/customers/delete/{customerId}
-                                (customerId=${customer.customerId})}"
+                            <a th:href="@{/users/delete/{userId}
+                                (userId=${user.userId})}"
                                class="btn btn-danger btn-sm">Eliminar</a>
 
                         </div>

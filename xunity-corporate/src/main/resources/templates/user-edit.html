@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Editar Usuario</title>
+</head>
+<body>
+
+
+<div class="container">
+    <h3>Editar Usuario</h3>
+
+    <div>
+
+        <form action="#" method="post"
+              th:object="${user}"
+              th:action="@{/users/update/{userId} (userId=${user.userId})} "
+        >
+
+            <div class="form-group">
+                <label for="userId">userId</label>
+                <input type="number" class="class-controller form-control"
+                       id="userId" placeholder="ingrese el userId"
+                       th:field="*{userId}"
+                       disabled
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="username">username</label>
+                <input type="text" class="class-controller form-control"
+                       id="username" placeholder="ingrese el nombre de usuario"
+                       th:field="*{username}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">password</label>
+                <input type="text" class="class-controller form-control"
+                       id="password" placeholder="ingrese la clave"
+                       th:field="*{password}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="name">name</label>
+                <input type="text" step=".01" class="class-controller form-control"
+                       id="name" placeholder="ingrese el nombre"
+                       th:field="*{name}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">lastName</label>
+                <input type="text" step=".01" class="class-controller form-control"
+                       id="lastName" placeholder="ingrese el apellido"
+                       th:field="*{lastName}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">email</label>
+                <input type="email" step=".01" class="class-controller form-control"
+                       id="email" placeholder="ingrese el correo"
+                       th:field="*{email}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="department">department</label>
+                <input type="text" step=".01" class="class-controller form-control"
+                       id="department" placeholder="ingrese el departamento"
+                       th:field="*{department}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="marketId">marketId</label>
+                <input type="number" class="class-controller form-control"
+                       id="marketId" placeholder="ingrese el marketId"
+                       th:field="*{marketId}"
+                >
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary">
+                Editar Customer
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

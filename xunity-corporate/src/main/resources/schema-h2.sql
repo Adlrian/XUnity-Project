@@ -23,3 +23,14 @@ create table customer(
     customerType int not null,
     marketId int not null,
 );
+
+create table user(
+    id identity primary key,
+    username varchar(100) not null,
+    password varchar(100) not null,
+    name varchar(100) not null,
+    lastName varchar(100) not null,
+    email varchar(200) not null,
+    department varchar(100) not null,
+    marketId int not null,
+);

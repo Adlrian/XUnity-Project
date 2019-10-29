@@ -1,1 +1,1 @@
-insert into product values (1, 'Prueba 1','Description', 15.5,20,30,1,'urltest');
+insert into product values (1, 'Prueba 1','Description', 15.5,20,30,1,'https://fuxionstorage.blob.core.windows.net/vhdfuxionoffix/newOffix/imageProducts/EC/EC_143392_GRA_07092018_215948_MAIN.jpg');

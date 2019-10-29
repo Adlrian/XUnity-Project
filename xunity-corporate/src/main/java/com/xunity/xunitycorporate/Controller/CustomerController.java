@@ -1,8 +1,6 @@
 package com.xunity.xunitycorporate.Controller;
 
 import com.xunity.xunitycorporate.Model.Customer;
-import com.xunity.xunitycorporate.Model.Customer;
-import com.xunity.xunitycorporate.Service.CustomerService;
 import com.xunity.xunitycorporate.Service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
