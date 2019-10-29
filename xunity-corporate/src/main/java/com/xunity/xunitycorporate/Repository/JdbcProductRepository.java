@@ -16,8 +16,8 @@ public class JdbcProductRepository implements ProductRepository{
 
     @Override
     public void create(Product product) {
-        final String sql = "insert into product(name, price) values (?,?)";
-        jdbcTemplate.update(sql, product.getProductName(), product.getPrice());
+        final String sql = "insert into product(name,description,price,stock,cvPoints,status,imageUrl) values (?,?,?,?,?,?,?)";
+        jdbcTemplate.update(sql, product.getProductName(),product.getProductDescription(),product.getPrice(),product.getStock(),product.getCvPoints(),product.getStatus(),product.getImageUrl());
     }
 
     @Override

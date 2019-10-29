@@ -1,6 +1,7 @@
 package com.xunity.xunitycorporate.Controller;
 
 import com.xunity.xunitycorporate.Model.Product;
+import com.xunity.xunitycorporate.Repository.JdbcProductRepository;
 import com.xunity.xunitycorporate.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,8 @@ public class ProductController implements GenericController<Product, Integer>{
 
     @Autowired
     private ProductService productService;
+
+
 
     @GetMapping("/products")
     public String getList(Model model) {
@@ -54,7 +57,7 @@ public class ProductController implements GenericController<Product, Integer>{
         return "redirect:/products";
     }
 
-    @GetMapping("/products/delete/{sku}")
+    @GetMapping("/products/delete/{productId}")
     public String delete(@PathVariable Integer productId, Model model) {
         Product currentProduct = productService.findById(productId);
         //Delete

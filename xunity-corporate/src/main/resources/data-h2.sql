@@ -1,0 +1,1 @@
+insert into product values (1, 'Prueba 1','Description', 15.5,20,30,1,'urltest');

@@ -1,4 +1,6 @@
 package com.xunity.xunitycorporate;
+import com.xunity.xunitycorporate.Model.Customer;
+import com.xunity.xunitycorporate.Repository.JdbcCustomerRepository;
 import org.slf4j.Logger;
 import com.xunity.xunitycorporate.Model.Product;
 import com.xunity.xunitycorporate.Repository.JdbcProductRepository;
@@ -24,6 +26,13 @@ public class XunityCorporateApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         logger.info("iniciando ....");
+
+        jdbcProductRepository
+                .create(new Product(null,"AAA", "AAA", 10.2, 20,9,1,"URLTEST"));
+        List<Product> products = jdbcProductRepository
+                .findAll();
+        logger.info("products: {}", products);
+
 
 
     }
