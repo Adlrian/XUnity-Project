@@ -5,9 +5,10 @@ import com.xunity.xunitycorporate.Model.Product;
 import com.xunity.xunitycorporate.Repository.JdbcCustomerRepository;
 import com.xunity.xunitycorporate.Repository.JdbcProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class CustomerService implements GenericService<Customer, Integer>{
 
     @Autowired

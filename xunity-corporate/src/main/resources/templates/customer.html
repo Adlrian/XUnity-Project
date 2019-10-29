@@ -15,9 +15,9 @@
 <body>
 
 <div class="container">
-    <h3>Listado de Carrito</h3>
+    <h3>Listado de Customers</h3>
     <div class="col-md-12">
-        <a th:href="@{/shoppingCarts/add}" class="btn btn-primary">Agregar a carrito</a>
+        <a th:href="@{/customers/add}" class="btn btn-primary">Agregar a carrito</a>
     </div>
 
     <div th:switch="customers">
@@ -25,7 +25,7 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">cartId</th>
+                    <th scope="col">customerId</th>
                     <th scope="col">productId</th>
                     <th scope="col">quantity</th>
                     <th scope="col">dateAdd</th>
@@ -40,12 +40,12 @@
                     <td class="text-right">
                         <div class="btn-group">
 
-                            <a th:href="@{/customers/edit/{cartId}
-                                    (dni=${customer.dni})}"
+                            <a th:href="@{/customers/edit/{customerId}
+                                    (customerId=${customer.customerId})}"
                                class="btn btn-primary btn-sm">Editar</a>
 
-                            <a th:href="@{/shoppingCarts/delete/{cartId}
-                                (dni=${customer.dni})}"
+                            <a th:href="@{/customers/delete/{customerId}
+                                (customerId=${customer.customerId})}"
                                class="btn btn-danger btn-sm">Eliminar</a>
 
                         </div>
