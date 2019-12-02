@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Editar Producto</title>
+</head>
+<body>
+
+
+<div class="container">
+    <h3>Editar Producto</h3>
+
+    <div>
+
+        <form action="#" method="post"
+              th:object="${product}"
+              th:action="@{/products/update/{productId} (productId=${product.productId})} "
+        >
+
+            <div class="form-group">
+                <label for="productId">productId</label>
+                <input type="text" class="class-controller form-control"
+                       id="productId" placeholder="ingrese el productId"
+                       th:field="*{productId}"
+                       disabled
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="productName">productName</label>
+                <input type="text" class="class-controller form-control"
+                       id="productName" placeholder="ingrese el nombre"
+                       th:field="*{productName}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="productDescription">productDescription</label>
+                <input type="text" class="class-controller form-control"
+                       id="productDescription" placeholder="ingrese la descripción"
+                       th:field="*{productDescription}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="stock">stock</label>
+                <input type="number" step=".01" class="class-controller form-control"
+                       id="stock" placeholder="ingrese el stock"
+                       th:field="*{stock}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="price">price</label>
+                <input type="number" step=".01" class="class-controller form-control"
+                       id="price" placeholder="ingrese el precio"
+                       th:field="*{price}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="cvPoints">cvPoints</label>
+                <input type="number" step=".01" class="class-controller form-control"
+                       id="cvPoints" placeholder="ingrese los puntos"
+                       th:field="*{cvPoints}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="status">status</label>
+                <input type="number" step=".01" class="class-controller form-control"
+                       id="status" placeholder="ingrese el estado"
+                       th:field="*{status}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="imageUrl">imageUrl</label>
+                <input type="text" class="class-controller form-control"
+                       id="imageUrl" placeholder="ingrese la url"
+                       th:field="*{imageUrl}"
+                >
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Editar Producto
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

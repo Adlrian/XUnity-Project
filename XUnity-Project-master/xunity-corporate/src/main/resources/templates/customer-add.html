@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Agregar Customers</title>
+</head>
+<body>
+
+
+<div class="container">
+    <h3>Agregar Customer</h3>
+
+    <div>
+
+        <form action="#" method="post"
+              th:object="${customer}"
+              th:action="@{/customers/save}"
+        >
+            <!--<div class="form-group">
+                <label for="productId">productId</label>
+                <input type="text" class="class-controller form-control"
+                       id="productId" placeholder="ingrese el productId"
+                       th:field="*{productId}"
+                >
+            </div>
+            -->
+
+
+            <div class="form-group">
+                <label for="customerName">customerName</label>
+                <input type="text" class="class-controller form-control"
+                       id="customerName" placeholder="ingrese el nombre"
+                       th:field="*{customerName}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="customerLastName">customerLastName</label>
+                <input type="text" class="class-controller form-control"
+                       id="customerLastName" placeholder="ingrese el apellido"
+                       th:field="*{customerLastName}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="username">username</label>
+                <input type="text" step=".01" class="class-controller form-control"
+                       id="username" placeholder="ingrese el nombre de usuario"
+                       th:field="*{username}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">password</label>
+                <input type="text" step=".01" class="class-controller form-control"
+                       id="password" placeholder="ingrese la clave"
+                       th:field="*{password}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">phone</label>
+                <input type="number" step=".01" class="class-controller form-control"
+                       id="phone" placeholder="ingrese el telefono"
+                       th:field="*{phone}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="dni">dni</label>
+                <input type="text" class="class-controller form-control"
+                       id="dni" placeholder="ingrese el DNI"
+                       th:field="*{dni}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="address">address</label>
+                <input type="text" class="class-controller form-control"
+                       id="address" placeholder="ingrese el correo"
+                       th:field="*{address}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="enrollerId">enrollerId</label>
+                <input type="number" class="class-controller form-control"
+                       id="enrollerId" placeholder="ingrese el enrollerId"
+                       th:field="*{enrollerId}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="status">status</label>
+                <input type="number" class="class-controller form-control"
+                       id="status" placeholder="ingrese el status"
+                       th:field="*{status}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="customerType">customerType</label>
+                <input type="number" class="class-controller form-control"
+                       id="customerType" placeholder="ingrese el customerType"
+                       th:field="*{customerType}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="marketId">marketId</label>
+                <input type="number" class="class-controller form-control"
+                       id="marketId" placeholder="ingrese el marketId"
+                       th:field="*{marketId}"
+                >
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Agregar Customer
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

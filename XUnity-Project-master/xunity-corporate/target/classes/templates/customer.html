@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Bienvenido</title>
+</head>
+<body>
+
+<div class="container">
+    <h3>Listado de Customers</h3>
+    <div class="col-md-12">
+        <a th:href="@{/customers/add}" class="btn btn-primary">Agregar customer</a>
+    </div>
+
+    <div th:switch="customers">
+        <div th:case="*">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th scope="col">customerId</th>
+                    <th scope="col">customerName</th>
+                    <th scope="col">customerLastName</th>
+                    <th scope="col">username</th>
+                    <th scope="col">dni</th>
+                    <th scope="col">actions</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="customer : ${customers}">
+                    <th scope="row" th:text="${customer.customerId}"></th>
+                    <td th:text="${customer.customerName}"></td>
+                    <td th:text="${customer.customerLastName}"></td>
+                    <td th:text="${customer.username}"></td>
+                    <td th:text="${customer.dni}"></td>
+                    <td class="text-center">
+                        <div class="btn-group">
+
+                            <a th:href="@{/customers/edit/{customerId}
+                                    (customerId=${customer.customerId})}"
+                               class="btn btn-primary btn-sm">Editar</a>
+
+                            <a th:href="@{/customers/delete/{customerId}
+                                (customerId=${customer.customerId})}"
+                               class="btn btn-danger btn-sm">Eliminar</a>
+
+                        </div>
+                    </td>
+
+                </tr>
+                </tbody>
+
+            </table>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
